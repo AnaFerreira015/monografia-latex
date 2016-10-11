@@ -1,3 +1,95 @@
+\documentclass{projetofinal-dcc}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%P A C O T E S
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Adicione aqui seus pacotes
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%I N I C I O  D O  D O C U M E N T O
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+% título da tese é obrigatório
+\title{Título do TCC}
+
+% autor é obrigatório
+\author{Nome completo do aluno}
+{\input{elementos-pretextuais/agradecimentos}}
+
+% orientador é obrigatório
+\advisor[Prof.]{Nome do orientador}{IC~-~UFAL}
+
+% co-orientador é opcional
+%\coadvisor[Prof.]{Nome do co-orientador,~M.Sc.}{}
+
+% máximo de 3 integrantes da banca (orientador e co-orientador já são adicionados automaticamente)
+\banca[Prof.]{Nome do participante banca 1,~D.Sc.}{IC~-~UFAL}
+\banca[Prof.]{Nome do participante banca 2,~Ph.D.}{IC~-~UFAL}
+%\banca[Prof.]{Nome do participante banca 3,~Ph.D.}{COPPE~-~UFRJ}
+
+\location{Maceió}{AL}{Brasil}
+
+% mês e ano de defesa
+\date{Setembro}{2016}
+\maketitle
+
+\startdocument
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%A G R A D E C I M E N T O S
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\makethankspage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%R E S U M O
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{abstract}{...}\end{abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%A B S T R A C T
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{englishabstract}{The state's duty is not limited to a mere judicial response, but requires the provision of effective protection that meets the constitutional principle of reasonable duration of the procedure laid down in the Constitution. However, the delay in the delivery of legal protection remains one of contemporary evils of civil procedure.}\end{englishabstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%L I S T A S
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Figuras
+\makefigurespage
+
+% Tabelas
+%\maketablespage
+
+% Algoritmos
+\makelistingspage
+
+% Abreviaturas (devem estar em ordem alfabética)
+\makeabrevpage{\item [LXC] Linux Containers
+\item [NIST] National Institute of Standards and Technology
+\item [HDFS] Hadoop Distributed File System
+\item [I/O] Input/Output
+\item [TX/RX] Transmit and Receive 
+\item [KVM] Kernel-based Virtual Machine
+\item [QEMU] Quick Emulator
+\item [PaaS] Plataform as a Service
+\item [SaaS] Software as a Service
+\item [IaaS] Infrastructure as a Service
+\item [MPI] Message Passing Interface 
+\item [ADML] Adaptative Distributed Machine Learning
+\item [REST] Representational State Transfer 
+\item [RAM] Random-Access Memory
+\item [API] Application Programming Interface
+\item [CPU] Central Processing Unit 
+\item [GNU] GNU's Not Unix
+\item [SSH] Secure Shell}
+
+% Sumário 
+\maketocpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%C O N T E Ú D O
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\startcontent
+
 \chapter{Lorem ipsum dolor sit amet}\label{chp:LABEL_CHP_1}
 
 \section{Lorem ipsum dolor sit amet}\label{sec:LABEL_CHP_1_SEC_A}
@@ -39,3 +131,70 @@ In hac habitasse platea dictumst. Nunc commodo, ante ut ullamcorper faucibus, er
 
 \section{Lorem ipsum dolor sit amet}\label{sec:LABEL_CHP_1_SEC_J}
 Nunc vitae tincidunt urna. Quisque non rhoncus ligula, eget mattis magna. Proin eget dictum mi. Nulla facilisi. Fusce fermentum tincidunt libero sed aliquam. Fusce in lectus erat. Maecenas blandit, ante ac euismod auctor, turpis purus dictum ligula, vel placerat libero massa ut erat. Donec tristique tincidunt purus vel egestas.
+
+\chapter{Lorem ipsum dolor sit amet}\label{chp:LABEL_CHP_2}
+
+\section{Tables}\label{sec:LABEL_CHP_2_SEC_A}
+Reference: \url{http://en.wikibooks.org/wiki/LaTeX/Tables}
+
+\begin{table}[!h]
+  \centering
+  \begin{tabular}{ |l|l|l| }
+    \hline
+      Goalkeeper & Alan Smith & Paul Robinson \\
+    \hline
+      Lucus Radebe &  Mark Viduka & Michael Duberry \\
+    \hline
+      Eirik Bakke & Jamie McMaster & Jody Morris \\
+    \hline
+  \end{tabular}
+  \caption{This table shows some data}
+  \label{tab:LABEL_TAB_1}
+\end{table}
+
+\section{Images}\label{sec:LABEL_CHP_2_SEC_B}
+Reference: \url{http://en.wikibooks.org/wiki/LaTeX/Importing_Graphics}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.6\textwidth]{../imgs/chick.png}
+  \caption{Chick}
+  \label{fig:LABEL_FIG_1}
+\end{figure}
+
+\section{Equations}\label{sec:LABEL_CHP_2_SEC_C}
+Reference: \url{http://en.wikibooks.org/wiki/LaTeX/Mathematics}
+
+Also: \url{http://en.wikibooks.org/wiki/LaTeX/Advanced\_Mathematics}
+
+\begin{equation}
+  (x + y)^2 = x^2 + 2xy + y^2
+  \label{eq:LABEL_EQ_1}
+\end{equation}
+
+\section{Listings}\label{sec:LABEL_CHP_2_SEC_D}
+Reference: \url{http://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings}
+
+\codec{C}{alg:LABEL_CODE_1}{../codigos/codigo-c.txt}
+
+\codejava{Java}{alg:LABEL_CODE_2}{../codigos/codigo-java.txt}
+
+\section{References}\label{sec:LABEL_CHP_2_SEC_E}
+\begin{itemize}
+  \item Referencing \refchapter{chp:LABEL_CHP_1}
+  \item Referencing \refsection{sec:LABEL_CHP_1_SEC_A}
+  \item Referencing \refsection{sec:LABEL_CHP_1_SEC_C}
+  \item Referencing \reftable{tab:LABEL_TAB_1}
+  \item Referencing \reffigure{fig:LABEL_FIG_1}
+  \item Referencing \refequation{eq:LABEL_EQ_1}
+  \item Referencing \reflisting{alg:LABEL_CODE_1}
+  \item Article \cite{art:REF_ART_1}
+  \item Referencing \refappendix{chp:LABEL_APP_1}
+\end{itemize}
+
+\pagebreak
+
+\bibliographystyle{ieeetr}
+\bibliography{refs}
+
+\end{document}

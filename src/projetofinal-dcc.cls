@@ -2,7 +2,7 @@
 % Identificação
 %=====================================================================
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{projetofinal-dcc}[2013/08/18 v1.0.0 Formatacao de documentos para o projeto final do DCC/NCE/UFRJ]
+\ProvidesClass{projetofinal-dcc}[2013/08/18 v1.0.0 Formatacao original de documentos para o projeto final do DCC/NCE/UFRJ e modificado para trabalho de conclusao de curso do IC/UFAL]
 
 %=====================================================================
 % Declaração de opções
@@ -73,6 +73,7 @@
       caption=#1,label=#2]{#3}
   }
 }
+
 
 %=====================================================================
 % Referências
@@ -192,7 +193,7 @@
     \thetitlepage
   \end{titlepage}%
   \clearpage
-  \@makeapprovalpage
+  %\@makeapprovalpage
 }
 \newcommand{\thetitlepage}{%
   \thispagestyle{empty}
@@ -263,7 +264,7 @@
     \bigskip
 
     \noindent
-    Projeto Final de Curso submetido ao Departamento de Ci\^encia da Computa\c{c}\~ao do Instituto de Matem\'atica da Universidade Federal do Rio de Janeiro como parte dos requisitos necess\'arios para obten\c{c}\~ao do grau de Bacharel em Inform\'atica.
+    Trabalho de Conclusão de Curso submetido ao Instituto de Ci\^encia da Computa\c{c}\~ao da Universidade Federal de Alagoas como parte dos requisitos necess\'arios para obten\c{c}\~ao do grau de Bacharel em Ci\^encia da Computa\c{c}\~ao.
 
     \noindent
     Apresentado por:
